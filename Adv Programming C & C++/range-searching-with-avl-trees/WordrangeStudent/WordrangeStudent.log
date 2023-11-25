@@ -1,0 +1,29 @@
+Start with 0.0 points.
+=================================
+Simple input pass
+Passed Tests/simple-input.txt
+
+=============================================
+Score is now
+2.0
+Simple input pass
+Passed Tests/double-input.txt
+
+=============================================
+Score is now
+4.0
+Small set of "a" words input pass
+Passed Tests/onlya-words-input.txt
+
+=============================================
+Score is now
+5.0
+allwords basic input pass
+Passed Tests/allwords-basic-input.txt
+
+=============================================
+Score is now
+7.0
+Timeout error in running ./wordrange /home/codio/workspace/.guides/secure/Rubric/Tests/allwords-more-input.txt my_output.txt: Took more than 60 seconds
+Final score
+7

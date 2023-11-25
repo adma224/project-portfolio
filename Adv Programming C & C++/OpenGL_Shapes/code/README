@@ -1,0 +1,13 @@
+Open GL Drawing Program
+
+ Author        Adrian Murillo, 
+			using code from Prof Wesley Mackey, UCSC
+ Date:         March 12nd, 2020
+ Course:       CSE 111
+ Instructor:   Prof Wesley Mackey
+
+ Sources:
+ 	cplusplus.com - C++ Reference
+	http://www.opengl-tutorial.org/
+ Comments: 
+ 	All functions work fine except for the border function

@@ -1,0 +1,12 @@
+# Spec file for Sixdegrees assignment of CSE101, Winter 2020
+#
+#################
+f1: Makefile
+f2: README
+c1: make
+e1: sixdegrees
+r1: make clean
+p1: ./sixdegrees
+t1: simple-input.txt
+o1: test-output.txt
+i1: simple-output.txt

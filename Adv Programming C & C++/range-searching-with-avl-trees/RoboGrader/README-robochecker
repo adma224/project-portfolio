@@ -1,0 +1,85 @@
+README for robochecker
+
+C. Seshadhri, Sept 2017, Jan 2018
+==================================
+
+Source files: robochecker.py, utilities.py
+Other files: spec files named <ASSN>-spec.txt. For example, HW1-spec.txt, Lab1-spec.txt, etc.
+
+==================================
+
+The robochecker tool is meant for students. It contains some simple checks on whether the student has named
+files correctly, whether executables are being produces, and whether some simple tests are passing.
+IMPORTANT: It always deletes the executables and object files in the directory.
+
+Instruction to run robochecker
+-------------------------------
+
+
+1) Place robochecker.py and utilities.py in your main folder. The folders actually containing the solution (such as HW1, Lab1, etc.)
+will be subfolders of this main folder.
+
+2) Create a folder Spec in the main folder. Store all the spec files in that folder.
+Thus, the folder Spec has the files HW1-spec.txt, Lab1-spec.txt, etc.
+
+Depending on how you set things up (like unzipping robochecker.zip in the main folder), you may not need to perform (1) and (2) above.
+Furthermore, you never have to do them over and over again. For new assignments, you only need to place the spec file in Spec folder.
+
+3) In the main folder, run "python3 robochecker.py <ASSN NAME>", 
+
+where <ASSN NAME> is HW1, Lab1, HW2, etc. 
+
+4) (OPTIONAL) You can also place robochecker.py in some other folder and run "python3 robochecker.py <ASSN NAME> <PATH TO FOLDER>"
+
+where <PATH TO FOLDER> is the folder containing solution folders.
+
+
+Interpreting the output of robochecker
+--------------------------------
+
+When you run this script, it will print out a bunch of messages on the console.
+    - If the last line says "PASS", congratulations. Things are mostly in order. This does not guarantee that your solution is correct. It only says that it passed some test cases.
+    - If the script says "FAIL", you need to fix things. The messages on the console will tell you what is wrong, so follow through with it. You will not get any credit for a solution that does not pass the checking script, regardless of how "close" you are to a correct solution. 
+    Remember, there could be multiple issues, such as:
+        - source files named incorrectly, especially because of capitalization
+        - lack of test input and output files
+        - executable (such as jar file) not created
+        - incorrect name of executable
+        - executable not generating output file with correct name
+        - output file is generated, but is incorrect. This is basically saying that
+        the structure of your solution is ok, but there are bugs in your code. Specifically, your code
+        is not correct on some simple test inputs. Look through the test input files for the offending
+        input. Happy (or more likely, painful) debugging!
+
+-------------------------------
+Spec files:
+
+The spec file must have name <ASSN>-spec.txt.
+Any line starting with # is ignored as a comment.
+Each line starts with some indicator (such as f, c, e, etc. possibly succeeding by a number for linking.
+
+The following explains the contents of the spec file. This is not necessary for actually running 
+the checker script. In what follows, x denotes an number.
+
+    fx: necessary file
+    cx: command creating some executable output
+    ex: name of executable
+    px: command producing output (it will take in arguments for input and output files specified below)
+    tx: name of test input file
+    ox: name of output file produced
+    ix: ideal output
+
+    Note that c and e are linked, so we could have c1, c2, etc. with corresponding e1, e2, etc.
+    Similarly, p, o, and i are linked. A command produces a specific output file, which is expected 
+    to be identical to an ideal output file. Thus (say), p1 produces output file o1 that is supposed
+    to be the same as i1.
+
+    The checker performs the following operations, iterating over x.
+        - Makes sure that all necessary files are present.
+        - Runs command "cx" and checks that the executable "ex" is created.
+        - Runs command "px" with arguments "tx" and "ox". This should produce a file named "ox".
+        - Checks that "ox" is identical to "ix".
+
+--------------------------------
+
+

@@ -1,0 +1,9 @@
+Text reader and word counter
+
+author: Adrian Murillo
+date: June 22, 2020
+course: CSE101
+institution: UCSC
+
+reads words in list form from an input file and counts how many appereances of each word 
+are present in the file. Outputs to an output file.

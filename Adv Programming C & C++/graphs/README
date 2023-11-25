@@ -1,0 +1,17 @@
+pa4 README
+
+Graph ADT package for BFS and other graph operations
+
+Files in Package: FindPAth.c Graph.c Graph.h GraphTest.c List.c List.h Makefile README
+
+Author: Adrian Murillo  University of California, Santa Cruz
+
+Assigment: 3     Course: CMPS 101      Instructor: Patrick Tantalo
+
+This is a Graph ADT that represents a graph as an array of Lists. Each vertex will be associated
+with an integer label in the range 1 to n, where n is the number of vertices in the graph. This program uses
+this Graph ADT to find shortest paths (i.e. paths with the fewest edges) between pairs of vertices. The
+client program using your Graph ADT is called FindPath, and will take two command line arguments with the input 
+and output file names.
+
+

@@ -1,0 +1,28 @@
+
+Simple Chat C++
+
+Author:		 	Adrian Murillo
+Date: 			3/18/2021
+
+Contents: 
+
+├── Makefile			- use make to compile
+├── README				- *this
+├── bin				
+│   ├── client			- client executable (see Simple Chat.pdf for usage)
+│   ├── client.o		- client object file
+│   ├── server			- server executable (see Simple Chat.pdf for usage)
+│   ├── server.o		- server object file
+│   └── util.o			- utility object file
+├── doc
+│   └── Simple Chat.pdf - Documentation PDF
+└── src
+    ├── client.cpp		- Client C++ Source File
+    ├── client.h		- Client Header File
+    ├── server.cpp		- Server C++ Source File
+    ├── server.h 		- Server Header File
+    ├── unp.h 			- Unix Network Programming Library
+    ├── util.cpp 		- Utility Functions and Declarations C++ Source File
+    └── util.h 			- Utility Libraries and Functions Header File
+
+3 directories, 15 files

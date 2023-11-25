@@ -1,0 +1,9 @@
+Author:       Adrian Murillo
+Student ID:   1573260
+Cruz ID:      amurill9
+
+Files:
+	client.cpp - main source that creates a socket and retreives HTML file.
+	client.h   - a list of useful libraries that were used in client.cpp plus a couple of usefull MACROS (taken from common unp.h library)
+	Makefile   - make directives to compile the code, test it, and check it for memory leaks. Also contains a few error management tests.
+	myweb      - executable binary that downloads an HTML file. Usage: ./myweb <web url> <IP address>:<port#>/<page i.e.index.html> <opt: -h>

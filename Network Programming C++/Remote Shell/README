@@ -1,0 +1,33 @@
+Simple Remote Shell C++
+
+Author:		 	Adrian Murillo
+Date: 			2/14/2021
+
+Contents: 
+	lab_3
+	├── Makefile					- Makefile. Use "make" to compile
+	├── README
+	├── bin
+	│   ├── myclient				- client program executable
+	│   ├── myserver				- server program executable
+	│   ├── shell_client.o 	
+	│   ├── shell_server.o
+	│   └── util.o
+	├── doc
+	│   └── Remote_Shell_C++.pdf	- documentation of the project
+	└── src
+	    ├── shell_client.cpp		- client c++ implementation
+	    ├── shell_client.h			- client libraries and parameters
+	    ├── shell_server.cpp		- server c++ implementation
+	    ├── shell_server.h			- server libraries and parameters
+	    ├── unp.h					- Unix Network Programming library
+	    ├── util.cpp				- utility c++ functions - err_sys()
+	    └── util.h					- utility libraries and parameters
+
+	3 directories, 15 files
+
+Description:
+
+Server and client implementation of a simple remote shell application. The user of the client 
+application can type various Unix shell commands, which execute on the server and return re-
+sults back to the client. 

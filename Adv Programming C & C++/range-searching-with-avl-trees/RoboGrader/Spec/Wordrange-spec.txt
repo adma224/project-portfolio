@@ -1,0 +1,11 @@
+# Spec file for Wordrange assignment of CSE101, Winter 2020
+#
+#################
+f1: Makefile
+f2: README
+c1: make
+e1: wordrange
+p1: ./wordrange
+t1: simple-input.txt
+o1: test-output.txt
+i1: simple-output.txt

@@ -1,0 +1,29 @@
+pa3 README
+
+Matrix ADT implementation package for Arithmetic Matrix Operations
+
+Files in Package: List.java ListTest.java Matrix.java MatrixTest.java Sparse.java README Makefile
+
+Author: Adrian Murillo  University of California, Santa Cruz
+
+Assigment: 3     Course: CMPS 101      Instructor: Patrick Tantalo
+
+An 𝑛 × 𝑛 square matrix is said to be sparse if the number of non-zero
+entries (abbreviated NNZ) is small compared to the total number of entries, 𝑛^2
+This java program is capable of performing fast matrix operations, even on very large matrices, provided they are
+sparse. 
+
+File Descriptions:
+
+	List.java
+		Doubly Linked List ADT
+	ListTest.java
+		Test main for List ADT
+	Matrix.java
+		Sparse Matrix ADT
+	MatrixTest.java
+		Test main for Matrix ADT
+	Sparse.java
+		Main program that performs matrix operations according to file input
+	Makefile
+		Creates and cleans executable

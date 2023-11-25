@@ -1,0 +1,27 @@
+Author:       Adrian Murillo
+Student ID:   1573260
+Cruz ID:      amurill9
+
+Folder Contents:
+
+UDP_TFTP
+	myserver -			 	Server executable file
+	myclient - 				Client executable file
+	sample_output.txt - 	Sample text file for TFTP file transfer
+	sample_servers.txt - 	Sample server info file for client
+	DOC
+		UDP_TFTP.pdf - 		Documentation file with explanations of design and logic of the program.
+		README - 			This file*
+	SRC
+		tftp_server.cpp - 	Server source code in c++
+		tftp_server.h - 	Server header file
+		tftp_client.cpp - 	Client source code in c++
+		tftp_client.h - 	Client header file
+		util.cpp - 	TFTP functions and err_sys() in c++
+		util.h - 		Utility function header file
+		Makefile - 	Run make to compile, and make client or make server for test runs.
+	BIN
+		*.o - 		All object files created by the compiler
+
+Error Handling:
+	Most errors are printed to stderr.

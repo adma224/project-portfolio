@@ -1,0 +1,23 @@
+Start with 0.0 points.
+=================================
+Just testing very simple input that can find it vertices are present
+Passed Tests/simple-input.txt
+
+=============================================
+Score is now
+2.0
+Testing a serious input that requires BFS
+Passed Tests/more-input.txt
+
+=============================================
+Score is now
+6.0
+Testing instances where movies have same name
+Passed Tests/testcommon-input.txt
+
+=============================================
+Score is now
+10.0
+Solution has passed all tests. The ordeal is over, you can take a breath now.
+Final score
+10

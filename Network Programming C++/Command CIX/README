@@ -1,0 +1,22 @@
+Client/Server and Sockets Program
+
+ Author        Adrian Murillo, 
+			using code from Prof Wesley Mackey, UCSC
+ Date:         March 2nd, 2020
+ Course:       CSE 111
+ Instructor:   Prof Wesley Mackey
+
+ Sources:
+ 	cplusplus.com - C++ Reference
+	   - manual page -
+		-istream::seekg
+		-memset
+		-strcpy
+		-ios::good
+		-ifstream
+		-writing binary with ostream
+ Comments: 
+	Submitted files util.h util.cpp even though they
+		are not used in the program. Submitted 
+		instead empty versions to delete the 
+		ones already submitted.	

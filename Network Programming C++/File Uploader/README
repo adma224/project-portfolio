@@ -1,0 +1,27 @@
+Student Name: Adrian Murillo
+Student ID: 1573260
+CruzID: amurill9
+
+Contents: 
+	unp.h
+	client.h
+	client.cpp
+	server.h
+	server.cpp
+
+Description:
+	Each ccp file is in charge of creating the main program for the client and server
+	and each have their own header files. Due poor time management I could not finish
+	the assignment, but atleast all of the logic is present. 
+
+	The serve receives packets and prints them out to stdout. The only change needed to 
+	make was to send as a first line of the packet the file name, and then process the
+	argument and use it to create a file with the corresponding name. I managed to send
+	first the filename but had no time to parse it into the name of the new file.
+
+	Also, the server does not repond with the echo file. This is simply just do exaclty 
+	what I did with the client pogram in the server program, reading from the newly crea-
+	ted text file. This implementation is trivial, so I hope the logic behind it is shown
+	in the rest of the code. If I had a bit more time I would implement this.
+
+	All errors are sent to cerr with a helpful error message.

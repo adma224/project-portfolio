@@ -1,0 +1,25 @@
+Key, Value Map ADT test
+
+The manual for this program is located in
+asg3-listmap-templates.pdf
+
+------------------------------------------
+
+All of my work is divided in these 3 files
+
+main.cpp
+listmapp.h
+listmap.tcc
+
+------------------------------------------
+
+All other code was written by:
+   
+   Professor Wesley Mackey, UCSC
+
+------------------------------------------
+
+Makefile is included
+
+Execname : keyvalue
+

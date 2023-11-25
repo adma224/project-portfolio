@@ -1,0 +1,38 @@
+Simple Remote Shell C++
+
+Author:		 	Adrian Murillo
+Date: 			2/28/2021
+
+Contents: 
+
+├── Makefile				- Makefile. Use "make" to compile
+├── README
+├── access.log				- log output file
+├── bin
+│   ├── proxy 				- proxy program executable
+│   └── proxy.o 			- binary object file
+├── doc
+│   └── HTTP Proxy.pdf 		- documentation
+├── forbidden-sites-file 	- blacklist text file 
+└── src
+    ├── proxy.cpp 			- proxy c++ source code
+    ├── proxy.h 			- c++ header file
+    └── unp.h 				- Unix Network Programming header file
+
+3 directories, 10 files
+
+Description:
+
+Concurrent HTTP proxy implementation. Performs DNS lookup and server 
+TCP connection upon web client HTTP request. 
+
+Errors:
+
+Most errors are handled approiately without affecting the excecution 
+of the pogram, unless this errors correspond to wrong usage or inco-
+rrect format of the blacklist file.
+
+The program prints to STDERR the system error and a helpful error me-
+ssage. If errors stop the connection with the client then an appropi-
+ate HTTP error message will be sent will the corresponding error in-
+formation.

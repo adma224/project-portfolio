@@ -1,0 +1,16 @@
+pa5 README
+
+Graph ADT package for DFS and other graph operations
+
+Files in Package: FindComponents.c Graph.c Graph.h GraphTest.c List.c List.h Makefile README
+
+Author: Adrian Murillo  University of California, Santa Cruz
+
+Assigment: 5     Course: CMPS 101      Instructor: Patrick Tantalo
+
+This is a Graph ADT that represents a graph as an array of Lists. Each vertex will be associated
+with an integer label in the range 1 to n, where n is the number of vertices in the graph. 
+
+
+This package contains a Graph module in C that implements Depth First Search (DFS). This Graph
+module finds the strongly connected components of a digraph. 
