@@ -1,0 +1,84 @@
+{
+    "Parameters": {
+        "KinesisDataStream": {
+            "Description": "The name of your Kinesis Data Stream.",
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "LnDataProducerInstance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "InstanceType": "t2.micro",
+                "ImageId": "ami-0080e4c5bc078760e",
+                "IamInstanceProfile": {
+                    "Ref": "LnInstanceProfiler"
+                },
+                "UserData": {
+                    "Fn::Base64": {
+                        "Fn::Sub": "#!/bin/bash -xe\nsudo yum install -y python3-pip\nsudo pip3 install boto3 requests\ncat <<EOF > /tmp/stream.py\nimport requests\nimport json\nimport boto3\nimport uuid\nimport time\nimport random\n\nclient = boto3.client('kinesis', region_name='us-east-1')\npartition_key = str(uuid.uuid4())\nnumber_of_results = 500\nr = requests.get(f'https://randomuser.me/api/?exc=login&results={number_of_results}')\ndata = r.json()['results']\nwhile True:\n    random_user_index = int(random.uniform(0, (number_of_results - 1)))\n    random_user = json.dumps(data[random_user_index])\n    response = client.put_record(StreamName='${KinesisDataStream}', Data=random_user, PartitionKey=partition_key)\n    time.sleep(random.uniform(0, 1))\nEOF\npython3 /tmp/stream.py &\n"
+                    }
+                }
+            }
+        },
+        "LnInstanceProfiler": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Roles": [
+                    {
+                        "Ref": "LnDataProducerRole"
+                    }
+                ]
+            }
+        },
+        "LnKinesisPolicy": {
+            "Type": "AWS::IAM::Policy",
+            "Properties": {
+                "PolicyDocument": {
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Action": [
+                                "kinesis:DescribeStream",
+                                "kinesis:PutRecord",
+                                "kinesis:PutRecords"
+                            ],
+                            "Resource": [
+                                {
+                                    "Fn::Sub": "arn:aws:kinesis:us-east-1:${AWS::AccountId}:stream/${KinesisDataStream}"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "PolicyName": "kinesis-put-records",
+                "Roles": [
+                    {
+                        "Ref": "LnDataProducerRole"
+                    }
+                ]
+            }
+        },
+        "LnDataProducerRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "RoleName": "data-producer-role"
+            }
+        }
+    }
+}
