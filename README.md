@@ -1,6 +1,6 @@
 # Adrian Murillo's Portfolio - Machine Learning Engineer & Cloud Architect
 
-Welcome to my GitHub portfolio! As a UC Santa Cruz graduate with double majors in Mathematics and Network and Digital Technology, and a seasoned Solutions Engineer, I have a rich background in machine learning, cloud architecture, and network engineering. This repository is a testament to my journey, featuring projects that showcase my technical skills, problem-solving abilities, and passion for developing cutting-edge solutions in the field of Machine Learning and Cloud Computing.
+Welcome to my GitHub portfolio! As a UC Santa Cruz graduate with double majors in Mathematics and Computer & Network Systems Engineering (Network and Digital Technology), and a seasoned Solutions Engineer, I have a rich background in machine learning, cloud architecture, and network socket programming. This repository is a testament to my journey, featuring projects that showcase my technical skills, problem-solving abilities, and passion for developing cutting-edge solutions in the field of Machine Learning and Cloud Computing.
 
 ## Table of Contents
 - [Advanced Programming in C and C++](#advanced-programming-in-c-and-c)
